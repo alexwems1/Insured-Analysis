@@ -37,6 +37,15 @@ Insured variable: Number of insured per policy year.
 
 Claims variable: Number of claims made by the lot or insured.
 
-Descriptive analysis of variables:
+In order to easily observe our data, a descriptive analysis of the
+variables is made through histograms.
 
-![](README_files/figure-gfm/pressure-1.png)<!-- -->![](README_files/figure-gfm/pressure-2.png)<!-- -->![](README_files/figure-gfm/pressure-3.png)<!-- -->![](README_files/figure-gfm/pressure-4.png)<!-- -->![](README_files/figure-gfm/pressure-5.png)<!-- -->![](README_files/figure-gfm/pressure-6.png)<!-- -->![](README_files/figure-gfm/pressure-7.png)<!-- -->![](README_files/figure-gfm/pressure-8.png)<!-- -->
+![](README_files/figure-gfm/pressure-1.png)<!-- -->![](README_files/figure-gfm/pressure-2.png)<!-- -->![](README_files/figure-gfm/pressure-3.png)<!-- -->![](README_files/figure-gfm/pressure-4.png)<!-- -->![](README_files/figure-gfm/pressure-5.png)<!-- -->![](README_files/figure-gfm/pressure-6.png)<!-- -->![](README_files/figure-gfm/pressure-7.png)<!-- -->
+
+To have a clear idea of the correlation between all the variables in
+terms of kilometers, municipality and model. The following graphs were
+made.
+
+a)Sum of insured per kilometer:
+
+![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->

@@ -55,11 +55,9 @@ Variable Make: Model of the insured car 1-8 represents a certain model and 9 rep
 
 Insured variable: Number of insured per policy year.
 
-Claims variable: Number of claims made by the lot or insured. 
+Claims variable: Number of claims made by the lot or insured.
 
-Descriptive analysis of variables:
-
-
+In order to easily observe our data, a descriptive analysis of the variables is made through histograms.
 
 ```{r pressure, echo = FALSE}
 columnas_hist <- names(data)
@@ -67,5 +65,20 @@ columnas_hist <- names(data)
 for (column in columnas_hist) {
    hist(data[,column], col="#198CE7", xlab=column,main=paste0("Histogram of ",column))
 }
-plot(pressure)
+```
+
+To have a clear idea of the correlation between all the variables in terms of kilometers, municipality and model.
+The following graphs were made. 
+
+a)Sum of insured per kilometer:
+
+```{r echo = FALSE}
+grafos <- c(1,2,3,4,5)
+primero <- c()
+segundo <- c()
+tercero <- c()
+for (i in c(1,2,3,4,5)) {
+  primero[i] <- sum(subset(data, Kilometres == i, select = c("Insured")))  
+}
+barplot(primero, names =grafos, xlab = "Kilometers",  ylab = "Sum of Insured", col = c("blue","red","green","yellow","black"))
 ```
