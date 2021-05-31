@@ -20,15 +20,23 @@ The first step is to take a look at our data.
     #> 5          1    1     1    5  191.01     40  119373
     #> 6          1    1     1    6  477.66     57  170913
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
+The kilometers variable describes the category of the number of
+kilometers driven per insured. 1.- &lt;1,000 km. 2.- 1,000 -15,000 km.
+3.- 15,000 - 20,000 km. 4.- 20,000 - 25,000 km. 5.- 25,000 km.
 
-You can also embed plots, for example:
+The zone variable describes the municipality to which the insured
+belongs. 1.- Monterrey. 2.- San Pedro. 3.- San Nicolas. 4.- Escobedo.
+5.- Guadalupe. 6.- Garcia. 7.- Others.
 
-![](README_files/figure-gfm/pressure-1.png)<!-- -->
+Variable Bonus: Number of years since the insured filed a claim +1
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub.
+Variable Make: Model of the insured car 1-8 represents a certain model
+and 9 represents the rest.
+
+Insured variable: Number of insured per policy year.
+
+Claims variable: Number of claims made by the lot or insured.
+
+Descriptive analysis of variables:
+
+![](README_files/figure-gfm/pressure-1.png)<!-- -->![](README_files/figure-gfm/pressure-2.png)<!-- -->![](README_files/figure-gfm/pressure-3.png)<!-- -->![](README_files/figure-gfm/pressure-4.png)<!-- -->![](README_files/figure-gfm/pressure-5.png)<!-- -->![](README_files/figure-gfm/pressure-6.png)<!-- -->![](README_files/figure-gfm/pressure-7.png)<!-- -->![](README_files/figure-gfm/pressure-8.png)<!-- -->

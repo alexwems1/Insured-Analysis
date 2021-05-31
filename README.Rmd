@@ -33,12 +33,39 @@ data <- read.csv("insurance.csv")
 head(data)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
+The kilometers variable describes the category of the number of kilometers driven per insured. 
+1.- <1,000 km. 
+2.- 1,000 -15,000 km. 
+3.- 15,000 - 20,000 km. 
+4.- 20,000 - 25,000 km. 
+5.- 25,000 km. 
 
-You can also embed plots, for example:
+The zone variable describes the municipality to which the insured belongs. 
+1.- Monterrey. 
+2.- San Pedro. 
+3.- San Nicolas. 
+4.- Escobedo. 
+5.- Guadalupe.
+6.- Garcia. 
+7.- Others. 
+
+Variable Bonus: Number of years since the insured filed a claim +1
+
+Variable Make: Model of the insured car 1-8 represents a certain model and 9 represents the rest. 
+
+Insured variable: Number of insured per policy year.
+
+Claims variable: Number of claims made by the lot or insured. 
+
+Descriptive analysis of variables:
+
+
 
 ```{r pressure, echo = FALSE}
+columnas_hist <- names(data)
+
+for (column in columnas_hist) {
+   hist(data[,column], col="#198CE7", xlab=column,main=paste0("Histogram of ",column))
+}
 plot(pressure)
 ```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub.
