@@ -20,22 +20,22 @@ The first step is to take a look at our data.
     #> 5          1    1     1    5  191.01     40  119373
     #> 6          1    1     1    6  477.66     57  170913
 
-The kilometers variable describes the category of the number of
-kilometers driven per insured. 1.- &lt;1,000 km. 2.- 1,000 -15,000 km.
-3.- 15,000 - 20,000 km. 4.- 20,000 - 25,000 km. 5.- 25,000 km.
+-   The kilometers variable describes the category of the number of
+    kilometers driven per insured. 1.- &lt;1,000 km. 2.- 1,000 -15,000
+    km. 3.- 15,000 - 20,000 km. 4.- 20,000 - 25,000 km. 5.- 25,000 km.
 
-The zone variable describes the municipality to which the insured
-belongs. 1.- Monterrey. 2.- San Pedro. 3.- San Nicolas. 4.- Escobedo.
-5.- Guadalupe. 6.- Garcia. 7.- Others.
+-   The zone variable describes the municipality to which the insured
+    belongs. 1.- Monterrey. 2.- San Pedro. 3.- San Nicolas. 4.-
+    Escobedo. 5.- Guadalupe. 6.- Garcia. 7.- Others.
 
-Variable Bonus: Number of years since the insured filed a claim +1
+-   Variable Bonus: Number of years since the insured filed a claim +1
 
-Variable Make: Model of the insured car 1-8 represents a certain model
-and 9 represents the rest.
+-   Variable Make: Model of the insured car 1-8 represents a certain
+    model and 9 represents the rest.
 
-Insured variable: Number of insured per policy year.
+-   Insured variable: Number of insured per policy year.
 
-Claims variable: Number of claims made by the lot or insured.
+-   Claims variable: Number of claims made by the lot or insured.
 
 In order to easily observe our data, a descriptive analysis of the
 variables is made through histograms.
@@ -46,15 +46,15 @@ To have a clear idea of the correlation between all the variables in
 terms of kilometers, municipality and model. The following graphs were
 made.
 
-a)Sum of insured per kilometer:
+#### a)Sum of insured per kilometer:
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-b)Sum of claims per kilometer
+#### b)Sum of claims per kilometer
 
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-c)Sum of pays per kilometer
+#### c)Sum of pays per kilometer
 
 ![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
@@ -62,14 +62,26 @@ We can see in the graphs that a similar trend is followed in the 3 cases
 for the relationship between the variables we are using with the
 kilometers variable.
 
-d)Sum of claims per Zone
+#### d)Sum of claims per Zone
 
 ![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
-e)Sum of Insured per Zone
+#### e)Sum of Insured per Zone
 
 ![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
-f)Sum of payments per Zone
+#### f)Sum of payments per Zone
 
 ![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
+#### g)Sum of claims per Model
+
+![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+
+#### h)Sum of Insured per Model
+
+![](README_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+
+#### g)Sum of Payments per Model
+
+![](README_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
