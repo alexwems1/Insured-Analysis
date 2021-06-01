@@ -82,3 +82,61 @@ for (i in c(1,2,3,4,5)) {
 }
 barplot(primero, names =grafos, xlab = "Kilometers",  ylab = "Sum of Insured", col = c("blue","red","green","yellow","black"))
 ```
+
+
+b)Sum of claims per kilometer
+
+```{r echo = FALSE}
+grafos <- c(1,2,3,4,5)
+primero <- c()
+segundo <- c()
+tercero <- c()
+for (j in c(1,2,3,4,5)) {
+  segundo[j] <- sum(subset(data, Kilometres == j, select = c("Claims")))  
+}
+barplot(segundo, names=grafos, xlab = "Kilometers",  ylab = "Sum of Claims", col = c("blue","red","green","yellow","black"))
+```
+
+c)Sum of pays per kilometer
+
+```{r echo = FALSE}
+grafos <- c(1,2,3,4,5)
+primero <- c()
+segundo <- c()
+tercero <- c()
+for (j in c(1,2,3,4,5)) {
+  tercero[j] <- sum(subset(data, Kilometres == j, select = c("Payment")))  
+}
+barplot(tercero, names=grafos, xlab = "Kilometers",  ylab = "Sum of payment", col = c("blue","red","green","yellow","black"))
+```
+
+We can see in the graphs that a similar trend is followed in the 3 cases for the relationship between the variables we are using with the kilometers variable.
+
+d)Sum of claims per Zone
+
+```{r echo = FALSE}
+grafis <- c(1,2,3,4,5,6,7)
+for (i in c(1,2,3,4,5,6,7)) {
+  primero[i] <- sum(subset(data, Zone == i, select = c("Claims")))  
+}
+barplot(primero, names=grafis ,xlab = "Zone",  ylab = "Sum of Claims", col = c("blue","red","green","yellow","black"))
+```
+
+e)Sum of Insured per Zone 
+
+```{r echo = FALSE}
+grafis <- c(1,2,3,4,5,6,7)
+for (i in c(1,2,3,4,5,6,7)) {
+  primero[i] <- sum(subset(data, Zone == i, select = c("Claims")))  
+}
+barplot(primero, names=grafis ,xlab = "Zone",  ylab = "Sum of Claims", col = c("blue","red","green","yellow","black"))
+```
+
+f)Sum of payments per Zone 
+
+```{r echo = FALSE}
+for (i in c(1,2,3,4,5,6,7)) {
+  primero[i] <- sum(subset(data, Zone == i, select = c("Payment")))  
+}
+barplot(primero, names=grafis ,xlab = "Zone",  ylab = "Sum of Claims", col = c("blue","red","green","yellow","black"))
+```

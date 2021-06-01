@@ -49,3 +49,27 @@ made.
 a)Sum of insured per kilometer:
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+b)Sum of claims per kilometer
+
+![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+c)Sum of pays per kilometer
+
+![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+We can see in the graphs that a similar trend is followed in the 3 cases
+for the relationship between the variables we are using with the
+kilometers variable.
+
+d)Sum of claims per Zone
+
+![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+
+e)Sum of Insured per Zone
+
+![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+f)Sum of payments per Zone
+
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
