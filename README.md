@@ -40,7 +40,7 @@ The first step is to take a look at our data.
 In order to easily observe our data, a descriptive analysis of the
 variables is made through histograms.
 
-![](README_files/figure-gfm/pressure-1.png)<!-- -->![](README_files/figure-gfm/pressure-2.png)<!-- -->![](README_files/figure-gfm/pressure-3.png)<!-- -->![](README_files/figure-gfm/pressure-4.png)<!-- -->![](README_files/figure-gfm/pressure-5.png)<!-- -->![](README_files/figure-gfm/pressure-6.png)<!-- -->![](README_files/figure-gfm/pressure-7.png)<!-- -->
+![](README_files/figure-gfm/pressure-1.png)<!-- -->![](README_files/figure-gfm/pressure-2.png)<!-- -->![](README_files/figure-gfm/pressure-3.png)<!-- -->
 
 To have a clear idea of the correlation between all the variables in
 terms of kilometers, municipality and model. The following graphs were
@@ -50,38 +50,10 @@ made.
 
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-#### b)Sum of claims per kilometer
+#### b)Sum of payments per Zone:
 
 ![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
-#### c)Sum of pays per kilometer
+#### c)Sum of claims per Model:
 
 ![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
-
-We can see in the graphs that a similar trend is followed in the 3 cases
-for the relationship between the variables we are using with the
-kilometers variable.
-
-#### d)Sum of claims per Zone
-
-![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
-
-#### e)Sum of Insured per Zone
-
-![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
-
-#### f)Sum of payments per Zone
-
-![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
-
-#### g)Sum of claims per Model
-
-![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
-
-#### h)Sum of Insured per Model
-
-![](README_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
-
-#### g)Sum of Payments per Model
-
-![](README_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
