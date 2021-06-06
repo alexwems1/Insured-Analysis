@@ -37,14 +37,14 @@ The first step is to take a look at our data.
 
 -   Claims variable: Number of claims made by the lot or insured.
 
-In order to easily observe our data, a descriptive analysis of the
-variables is made through histograms.
+### First descriptive analysis
+
+In order to understand in a correct way the data being handled, an
+analysis of the dataphrame was made. A sampling of the variables that
+are in our model is made, as well as the relationship that they have
+with each other.
 
 ![](README_files/figure-gfm/pressure-1.png)<!-- -->![](README_files/figure-gfm/pressure-2.png)<!-- -->![](README_files/figure-gfm/pressure-3.png)<!-- -->
-
-To have a clear idea of the correlation between all the variables in
-terms of kilometers, municipality and model. The following graphs were
-made.
 
 #### a)Sum of insured per kilometer:
 
@@ -57,3 +57,25 @@ made.
 #### c)Sum of claims per Model:
 
 ![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+A more exhaustive analysis of each variable as well as the relationship
+of one to the other can be found at in the `lol.R` file.
+
+### Correlation with the variable payments
+
+For the insurance company, it is essential to see the relationship
+between the payment variable and the other variables, so we studied the
+correlation between the number of claims and the number of years in the
+portfolio in order to focus our efforts on strengthening everything that
+improves the payments received.
+
+Making a correlation matrix we can see the relationship of one variable
+to another.
+
+![](README_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+It can be seen that the variables with the highest correlation with
+payments are Insured and claims. Therefore a scatterplot of these
+variables was made.
+
+![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->

@@ -57,7 +57,10 @@ head(data)
 
 * Claims variable: Number of claims made by the lot or insured.
 
-In order to easily observe our data, a descriptive analysis of the variables is made through histograms.
+### First descriptive analysis 
+
+In order to understand in a correct way the data being handled, an analysis of the dataphrame was made. A sampling of the variables that are in our model is made, as well as the relationship that they have with each other. 
+
 
 ```{r pressure, echo = FALSE}
 columnas_hist <- c("Payment", "Claims", "Kilometres")
@@ -66,9 +69,6 @@ for (column in columnas_hist) {
    hist(data[,column], col="#198CE7", xlab=column,main=paste0("Histogram of ",column))
 }
 ```
-
-To have a clear idea of the correlation between all the variables in terms of kilometers, municipality and model.
-The following graphs were made. 
 
 #### a)Sum of insured per kilometer:
 
@@ -103,3 +103,29 @@ for (i in c(1,2,3,4,5,6,7,8,9)) {
 barplot(primero, names=grafes ,xlab = "Models",  ylab = "Sum of Claims ", col = c("blue","red","green","yellow","black"))
 ```
 
+A more exhaustive analysis of each variable as well as the relationship of one to the other can be found at in the `lol.R` file. 
+
+### Correlation with the variable payments
+
+For the insurance company, it is essential to see the relationship between the payment variable and the other variables, so we studied the correlation between the number of claims and the number of years in the portfolio in order to focus our efforts on strengthening everything that improves the payments received.
+
+Making a correlation matrix we can see the relationship of one variable to another.
+
+```{r, include = FALSE}
+library(corrplot)
+correlacion<-round(cor(data),1)
+
+```
+
+```{r echo = FALSE}
+corrplot(correlacion, method="number", type="upper")
+```
+
+It can be seen that the variables with the highest correlation with payments are Insured and claims. Therefore a scatterplot of these variables was made. 
+
+
+```{r echo = FALSE}
+plot(data$Insured,data$Payment, xlab = "Insured",  ylab = "Payments" )
+plot(data$Claims,data$Payment, xlab = "Claims",  ylab = "Payments")
+
+```
