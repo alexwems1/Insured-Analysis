@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 
 
-The code is avaible in the `lol.R` file. 
+The code is avaible in the `Insured-Analysis.R` file. 
 
 With a series of data which correspond to the claims of an insurer in Monterrey. It is to analyze and combine the risks of the insurer's portfolio. This report is created as a support for the risk committee to know the influence of the claims with the variables that are known.
 
@@ -103,7 +103,7 @@ for (i in c(1,2,3,4,5,6,7,8,9)) {
 barplot(primero, names=grafes ,xlab = "Models",  ylab = "Sum of Claims ", col = c("blue","red","green","yellow","black"))
 ```
 
-A more exhaustive analysis of each variable as well as the relationship of one to the other can be found at in the `lol.R` file. 
+A more exhaustive analysis of each variable as well as the relationship of one to the other can be found at in the `Insured-Analysis.R` file. 
 
 ### Correlation with the variable payments
 

@@ -3,7 +3,7 @@
 
 # Insured-Analysis
 
-The code is avaible in the `lol.R` file.
+The code is avaible in the `Insured-Analysis.R` file.
 
 With a series of data which correspond to the claims of an insurer in
 Monterrey. It is to analyze and combine the risks of the insurer’s
@@ -59,7 +59,7 @@ with each other.
 ![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 A more exhaustive analysis of each variable as well as the relationship
-of one to the other can be found at in the `lol.R` file.
+of one to the other can be found at in the `Insured-Analysis.R` file.
 
 ### Correlation with the variable payments
 
