@@ -129,3 +129,36 @@ plot(data$Insured,data$Payment, xlab = "Insured",  ylab = "Payments" )
 plot(data$Claims,data$Payment, xlab = "Claims",  ylab = "Payments")
 
 ```
+
+```{r echo = FALSE}
+pago_especial <- c()
+
+for (i in c(1,2,3,4,5)) {
+  primero_chale <- sum(subset(data, Kilometres == i, select = c("Insured")))
+  segundo_chale <- sum(subset(data, Kilometres == i, select = c("Payment")))  
+  pago_especial[i] <- primero_chale/segundo_chale
+
+}
+
+barplot(pago_especial, names =grafos, xlab = "Kilometros", ylab= "Pago especial")
+
+pago_especial1 <- c()
+grafis <- c(1,2,3,4,5,6,7)
+for (i in c(1,2,3,4,5,6,7)) {
+  primero_chale1 <- sum(subset(data, Zone == i, select = c("Insured")))
+  segundo_chale1<- sum(subset(data, Zone == i, select = c("Payment")))  
+  pago_especial1[i] <- primero_chale1/segundo_chale1
+}
+
+barplot(pago_especial1, names =grafis, xlab = "Municipio", ylab= "Pago especial")
+
+pago_especial2 <- c()
+grafis <- c(1,2,3,4,5,6,7)
+for (i in c(1,2,3,4,5,6,7)) {
+  primero_chale2 <- sum(subset(data, Bonus == i, select = c("Insured")))
+  segundo_chale2<- sum(subset(data, Bonus == i, select = c("Payment")))  
+  pago_especial2[i] <- primero_chale2/segundo_chale2
+}
+
+barplot(pago_especial2, names =grafis, xlab = "Bono", ylab= "Pago especial")
+```
