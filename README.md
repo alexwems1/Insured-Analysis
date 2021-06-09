@@ -37,6 +37,8 @@ The first step is to take a look at our data.
 
 -   Claims variable: Number of claims made by the lot or insured.
 
+------------------------------------------------------------------------
+
 ### First descriptive analysis
 
 In order to understand in a correct way the data being handled, an
@@ -61,6 +63,8 @@ with each other.
 A more exhaustive analysis of each variable as well as the relationship
 of one to the other can be found at in the `Insured-Analysis.R` file.
 
+------------------------------------------------------------------------
+
 ### Correlation with the variable payments
 
 For the insurance company, it is essential to see the relationship
@@ -80,4 +84,37 @@ variables was made.
 
 ![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
 
-![](README_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-10-2.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-10-3.png)<!-- -->
+The committee wants to find the variables that most interfere with
+growth or decline. For this purpose, a linear regression was
+
+    #> 
+    #> Call:
+    #> lm(formula = Payment ~ ., data = data)
+    #> 
+    #> Residuals:
+    #>     Min      1Q  Median      3Q     Max 
+    #> -806775  -16943   -6321   11528  847015 
+    #> 
+    #> Coefficients:
+    #>               Estimate Std. Error t value Pr(>|t|)    
+    #> (Intercept) -2.173e+04  6.338e+03  -3.429 0.000617 ***
+    #> Kilometres   4.769e+03  1.086e+03   4.392 1.18e-05 ***
+    #> Zone         2.323e+03  7.735e+02   3.003 0.002703 ** 
+    #> Bonus        1.183e+03  7.737e+02   1.529 0.126462    
+    #> Make        -7.543e+02  6.107e+02  -1.235 0.216917    
+    #> Insured      2.788e+01  6.652e-01  41.913  < 2e-16 ***
+    #> Claims       4.316e+03  1.895e+01 227.793  < 2e-16 ***
+    #> ---
+    #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    #> 
+    #> Residual standard error: 70830 on 2175 degrees of freedom
+    #> Multiple R-squared:  0.9952, Adjusted R-squared:  0.9952 
+    #> F-statistic: 7.462e+04 on 6 and 2175 DF,  p-value: < 2.2e-16
+
+We observe the variables Claims and Insured as we expected, have very
+much relation with Payment according to P-values, at the same,
+Kilometres and the Zone have very much relation but less than Claims and
+Insured, knowing that, we can plot the linear model together with the
+respective variable.
+
+![](README_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-11-2.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-11-3.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-11-4.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-11-5.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-11-6.png)<!-- -->

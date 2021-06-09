@@ -57,6 +57,8 @@ head(data)
 
 * Claims variable: Number of claims made by the lot or insured.
 
+***
+
 ### First descriptive analysis 
 
 In order to understand in a correct way the data being handled, an analysis of the dataphrame was made. A sampling of the variables that are in our model is made, as well as the relationship that they have with each other. 
@@ -105,6 +107,8 @@ barplot(primero, names=grafes ,xlab = "Models",  ylab = "Sum of Claims ", col = 
 
 A more exhaustive analysis of each variable as well as the relationship of one to the other can be found at in the `Insured-Analysis.R` file. 
 
+***
+
 ### Correlation with the variable payments
 
 For the insurance company, it is essential to see the relationship between the payment variable and the other variables, so we studied the correlation between the number of claims and the number of years in the portfolio in order to focus our efforts on strengthening everything that improves the payments received.
@@ -130,35 +134,22 @@ plot(data$Claims,data$Payment, xlab = "Claims",  ylab = "Payments")
 
 ```
 
+
+The committee wants to find the variables that most interfere with growth or decline. For this purpose, a linear regression was
+
 ```{r echo = FALSE}
-pago_especial <- c()
+regresion <- lm(Payment ~ ., data = data)
+summary(regresion)
+```
 
-for (i in c(1,2,3,4,5)) {
-  primero_chale <- sum(subset(data, Kilometres == i, select = c("Insured")))
-  segundo_chale <- sum(subset(data, Kilometres == i, select = c("Payment")))  
-  pago_especial[i] <- primero_chale/segundo_chale
+We observe the variables Claims and Insured as we expected, have very much relation with Payment according to P-values, at the same, Kilometres and the Zone have very much relation but less than Claims and Insured, knowing that, we can plot the linear model together with the respective variable.
 
-}
+```{r echo = FALSE}
+plot(data$Insured,data$Payment)
+plot(data$Claims,data$Payment)
+plot(data$Kilometres,data$Payment)
+plot(data$Zone,data$Payment)
+scatter.smooth(x=data$Insured,y=data$Payment, main = "Insured~Payment")
+scatter.smooth(x=data$Claims,y=data$Payment, main = "Claims~Payment")
 
-barplot(pago_especial, names =grafos, xlab = "Kilometros", ylab= "Pago especial")
-
-pago_especial1 <- c()
-grafis <- c(1,2,3,4,5,6,7)
-for (i in c(1,2,3,4,5,6,7)) {
-  primero_chale1 <- sum(subset(data, Zone == i, select = c("Insured")))
-  segundo_chale1<- sum(subset(data, Zone == i, select = c("Payment")))  
-  pago_especial1[i] <- primero_chale1/segundo_chale1
-}
-
-barplot(pago_especial1, names =grafis, xlab = "Municipio", ylab= "Pago especial")
-
-pago_especial2 <- c()
-grafis <- c(1,2,3,4,5,6,7)
-for (i in c(1,2,3,4,5,6,7)) {
-  primero_chale2 <- sum(subset(data, Bonus == i, select = c("Insured")))
-  segundo_chale2<- sum(subset(data, Bonus == i, select = c("Payment")))  
-  pago_especial2[i] <- primero_chale2/segundo_chale2
-}
-
-barplot(pago_especial2, names =grafis, xlab = "Bono", ylab= "Pago especial")
 ```
